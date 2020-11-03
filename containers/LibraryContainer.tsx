@@ -1,12 +1,12 @@
+import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
 import { CSVLink } from 'react-csv';
-import { FunctionComponent, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { Table } from '../components/table/Table';
 import { AuthorsCellRenderer } from '../components/AuthorsCellRenderer';
 import { IBook, IMagazine } from '../schemas';
 import { NewBookDialog } from '../components/NewBookDialog';
 
-const CELLS = [
+export const CELLS = [
   {
     name: 'title',
     isSortable: true,

@@ -1,10 +1,9 @@
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import TableCell from '@material-ui/core/TableCell/TableCell';
 import Checkbox from '@material-ui/core/Checkbox/Checkbox';
 import MuiTableRow from '@material-ui/core/TableRow';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { IRow } from './models';
-import Link from 'next/link';
 
 const useStyles = makeStyles(() => ({
   cell: {

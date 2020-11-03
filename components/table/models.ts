@@ -6,7 +6,7 @@ export interface IRowData {
 }
 
 export interface ITable {
-  data: Array<IRowData>;
+  data?: Array<IRowData>;
   defaultSortColumn: string;
   cells: Array<ICell>;
   onRemoveItem?: (ids: string[]) => void;
@@ -33,7 +33,7 @@ export interface ICell {
 
 export interface ITableHead {
   onSelectAllClick: (e: SyntheticEvent) => void;
-  order: SortOrders;
+  order: typeof SortOrders;
   orderBy: string;
   cells: Array<ICell>;
   numSelected: number;

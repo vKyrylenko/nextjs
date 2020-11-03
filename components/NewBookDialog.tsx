@@ -10,10 +10,10 @@ import TextField from '@material-ui/core/TextField';
 import DialogActions from '@material-ui/core/DialogActions';
 import { IMagazine } from '../schemas';
 
-enum BOOK_TYPES {
-  BOOK = 'BOOK',
-  MAGAZINE = 'MAGAZINE',
-}
+const BOOK_TYPES = {
+  BOOK: 'BOOK',
+  MAGAZINE: 'MAGAZINE',
+};
 
 const INITIAL_STATE = {
   title: '',

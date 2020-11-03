@@ -1,10 +1,10 @@
-export enum SortOrders {
-  DESC = 'desc',
-  ASC = 'asc',
-}
+export const SortOrders = {
+  DESC: 'desc',
+  ASC: 'asc',
+};
 
 export function descendingComparator(a, b, orderBy) {
-  return b[orderBy].localeCompare(a[orderBy]);
+  return a && b && b[orderBy].localeCompare(a[orderBy]);
 }
 
 export function getComparator(order, orderBy) {

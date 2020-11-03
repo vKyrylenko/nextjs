@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<header
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary mui-fixed MuiPaper-elevation4"
+>
+  <div
+    className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+  >
+    <a
+      className="makeStyles-item-1"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      Home
+    </a>
+    <a
+      className="makeStyles-item-1"
+      href="/library"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      Library
+    </a>
+  </div>
+</header>
+`;

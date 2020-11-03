@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
 export const useAuthorsCellRendererStyles = makeStyles(() => ({

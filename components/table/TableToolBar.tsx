@@ -1,4 +1,4 @@
-import { FocusEvent, FunctionComponent, useState } from 'react';
+import React, { FocusEvent, FunctionComponent, useState } from 'react';
 import { Toolbar } from '@material-ui/core';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
@@ -37,9 +37,7 @@ export const TableToolBar: FunctionComponent<ITableToolBar> = ({
           {numSelected} selected
         </Typography>
       ) : (
-        <Typography className={classes.title} variant="h6" id="tableTitle" component="div">
-          Library
-        </Typography>
+        <h3 className={classes.title}>Library</h3>
       )}
 
       {onSearch && !numSelected && <TextField defaultValue={filter} onBlur={changeFilterHandler} />}
