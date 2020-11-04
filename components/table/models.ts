@@ -1,4 +1,3 @@
-import { SortOrders } from './utils';
 import { SyntheticEvent } from 'react';
 
 export interface IRowData {
@@ -33,7 +32,7 @@ export interface ICell {
 
 export interface ITableHead {
   onSelectAllClick: (e: SyntheticEvent) => void;
-  order: typeof SortOrders;
+  order: 'asc' | 'desc';
   orderBy: string;
   cells: Array<ICell>;
   numSelected: number;

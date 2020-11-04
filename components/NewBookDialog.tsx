@@ -1,4 +1,4 @@
-import { FocusEvent, FunctionComponent, useState } from 'react';
+import React, { FocusEvent, FunctionComponent, useState } from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import DialogTitle from '@material-ui/core/DialogTitle';

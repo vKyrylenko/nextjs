@@ -1,6 +1,6 @@
-import Header from './Header';
+import React, { FunctionComponent, ReactNode } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import { FunctionComponent, ReactNode } from 'react';
+import Header from './Header';
 
 const useStyles = makeStyles(() => ({
   main: {

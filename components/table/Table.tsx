@@ -25,7 +25,7 @@ export const Table: FunctionComponent<ITable> = ({
   onExportItems,
 }) => {
   const classes = useStyles();
-  const [order, setOrder] = useState(SortOrders.ASC);
+  const [order, setOrder] = useState<'asc' | 'desc'>(SortOrders.ASC);
   const [orderBy, setOrderBy] = useState(defaultSortColumn);
   const [selected, setSelected] = useState([]);
   const [page, setPage] = useState(0);
@@ -48,20 +48,15 @@ export const Table: FunctionComponent<ITable> = ({
   };
 
   const handleClick = (event, name) => {
-    const selectedIndex = selected.indexOf(name);
-    let newSelected = [];
+    setSelected((prevSelected) => {
+      const isExist = prevSelected.some((sel) => sel === name);
 
-    if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, name);
-    } else if (selectedIndex === 0) {
-      newSelected = newSelected.concat(selected.slice(1));
-    } else if (selectedIndex === selected.length - 1) {
-      newSelected = newSelected.concat(selected.slice(0, -1));
-    } else if (selectedIndex > 0) {
-      newSelected = newSelected.concat(selected.slice(0, selectedIndex), selected.slice(selectedIndex + 1));
-    }
+      if (isExist) {
+        return prevSelected.filter((sel) => sel !== name);
+      }
 
-    setSelected(newSelected);
+      return [...prevSelected, name];
+    });
   };
 
   const handleChangePage = (event, newPage) => {

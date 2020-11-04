@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import { getData } from '../../lib/posts';
 import { getComparator, stableSort } from '../../components/table/utils';
 import { IBook, IMagazine } from '../../schemas';
